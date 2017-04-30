@@ -1,0 +1,74 @@
+﻿/* Custom fonts */
+@font-face {
+  font-family: Ubuntu;
+  src: local("Ubuntu"),
+       local("Ubuntu-Regular"),
+       url(Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu-Italic;
+  src: local("Ubuntu-Italic"),
+       url(Ubuntu-Italic.ttf);
+}
+
+/* Tag overrrides */
+body, h1, h2, h3, h4, h5{
+    font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 3.0rem;
+}
+
+h2{
+    font-size: 2.0rem;color:#37474f;
+    margin-bottom: 0px;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+strong {
+    font-size: 1.1em;
+    color: darkblue;
+}
+
+/* Materializecss overrrides */
+.carousel-slider {
+    height: 400px !important;
+}
+
+/* Custom styles overrrides */
+.dpg-opaque {
+  /* Theoretically for IE 8 & 9 (more valid) */
+  /* ...but not required as filter works too */
+  /* should come BEFORE filter */
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+
+  /* This works in IE 8 & 9 too */
+  /* ... but also 5, 6, 7 */
+  filter: alpha(opacity=60);
+  
+  /* Modern Browsers */
+  opacity: 0.6;
+}
+
+.dpg-italic {
+  font-style: italic;
+}
+
+.dpg-icon {
+    max-width:4rem;
+    max-height:4rem;
+}
+
+.dpg-album-card-image {
+    width:300px;
+    height:225px;
+}
+
+.dpg-album-card, .dpg-album-image {
+    max-width:300px;
+}

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load staticfiles %}
+    
+    {% include 'material/includes/material_css.html' %}
+    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" />
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="{% url 'gallery' %}" class="brand-logo" style="padding-left:1rem;">
+                Django Photo Gallery
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <div class="userView">
+                        <div class="background"></div>
+                        <span class="white-text name">Django Photo Gallery</span>
+                    </div>
+                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <a href="http://blog.velingeorgiev.pro/" target="_blank">
+                        <img src="{% static 'social/social-rss.svg' %}" class="dpg-icon" alt="Django Photo Gallery RSS Feed" />
+                    </a>
+                    <a href="https://github.com/VelinGeorgiev" target="_blank">
+                        <img src="{% static 'social/social-github.svg' %}" class="dpg-icon" alt="Django Photo Gallery Github" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/velingeorgiev" target="_blank">
+                        <img src="{% static 'social/social-linkedin.svg' %}" class="dpg-icon" alt="Django Photo Gallery Linkedin" />
+                    </a>
+                    <a href="https://twitter.com/velingeorgiev" target="_blank">
+                        <img src="{% static 'social/social-twitter.svg' %}" class="dpg-icon" alt="Django Photo Gallery Twitter" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright Free - Sharing is Caring
+                <a class="grey-text text-lighten-4 right" href="#!">Sample created by @VelinGeorgiev</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
+    <script src="{% static 'app.js' %}"></script>
+
+    {% block js %}{% endblock %}
+</body>
+</html>

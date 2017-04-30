@@ -1,0 +1,4 @@
+django == 1.10.5
+django-material == 0.12.0
+Pillow == 3.00
+django-imagekit == 3.3	

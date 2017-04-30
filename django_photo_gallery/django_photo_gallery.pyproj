@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>django_photo_gallery</Name>
+    <RootNamespace>blog</RootNamespace>
+    <InterpreterId>{128000f8-dc92-49b7-ba37-49f04ca5854a}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+    <WebBrowserPort>5008</WebBrowserPort>
+    <NameOfLastUsedPublishProfile>dadomama - Web Deploy</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2b4962a6-b18c-429e-96b6-170ed9c3a436</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\admin.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="django_photo_gallery\__init__.py" />
+    <Compile Include="django_photo_gallery\settings.py" />
+    <Compile Include="django_photo_gallery\urls.py" />
+    <Compile Include="django_photo_gallery\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\external\" />
+    <Folder Include="app\static\external\photoswipe\" />
+    <Folder Include="app\static\external\photoswipe\default-skin\" />
+    <Folder Include="app\static\images\" />
+    <Folder Include="app\static\social\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="django_photo_gallery\" />
+    <Folder Include="media\" />
+    <Folder Include="media\albums\" />
+    <Folder Include="static\" />
+    <Folder Include="static\admin\" />
+    <Folder Include="static\admin\css\" />
+    <Folder Include="static\admin\fonts\" />
+    <Folder Include="static\admin\img\" />
+    <Folder Include="static\admin\img\gis\" />
+    <Folder Include="static\admin\js\" />
+    <Folder Include="static\admin\js\admin\" />
+    <Folder Include="static\admin\js\vendor\" />
+    <Folder Include="static\admin\js\vendor\jquery\" />
+    <Folder Include="static\admin\js\vendor\xregexp\" />
+    <Folder Include="static\external\" />
+    <Folder Include="static\external\photoswipe\" />
+    <Folder Include="static\external\photoswipe\default-skin\" />
+    <Folder Include="static\images\" />
+    <Folder Include="static\material\" />
+    <Folder Include="static\material\css\" />
+    <Folder Include="static\material\fonts\" />
+    <Folder Include="static\material\fonts\material-design-icons\" />
+    <Folder Include="static\material\fonts\roboto\" />
+    <Folder Include="static\material\imgs\" />
+    <Folder Include="static\material\js\" />
+    <Folder Include="static\material\sass\" />
+    <Folder Include="static\social\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\static\app.js" />
+    <Content Include="app\static\external\photoswipe\default-skin\default-skin.css" />
+    <Content Include="app\static\external\photoswipe\default-skin\default-skin.png" />
+    <Content Include="app\static\external\photoswipe\default-skin\default-skin.svg" />
+    <Content Include="app\static\external\photoswipe\default-skin\preloader.gif" />
+    <Content Include="app\static\external\photoswipe\photoswipe-ui-default.min.js" />
+    <Content Include="app\static\external\photoswipe\photoswipe.css" />
+    <Content Include="app\static\external\photoswipe\photoswipe.min.js" />
+    <Content Include="app\static\images\lake.jpg" />
+    <Content Include="app\static\images\mountain.jpg" />
+    <Content Include="app\static\social\social-facebook-black.svg" />
+    <Content Include="app\static\social\social-facebook.svg" />
+    <Content Include="app\static\social\social-github-black.svg" />
+    <Content Include="app\static\social\social-github.svg" />
+    <Content Include="app\static\social\social-googleplus-black.svg" />
+    <Content Include="app\static\social\social-googleplus.svg" />
+    <Content Include="app\static\social\social-linkedin-black.svg" />
+    <Content Include="app\static\social\social-linkedin.svg" />
+    <Content Include="app\static\social\social-pinterest-black.svg" />
+    <Content Include="app\static\social\social-pinterest.svg" />
+    <Content Include="app\static\social\social-rss-black.svg" />
+    <Content Include="app\static\social\social-rss.svg" />
+    <Content Include="app\static\social\social-twitter-black.svg" />
+    <Content Include="app\static\social\social-twitter.svg" />
+    <Content Include="app\static\social\social-youtube-black.svg" />
+    <Content Include="app\static\social\social-youtube.svg" />
+    <Content Include="app\static\Ubuntu-Italic.ttf" />
+    <Content Include="app\static\Ubuntu-Regular.ttf" />
+    <Content Include="app\templates\app\album_detail.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="app\templates\handler404.html" />
+    <Content Include="app\templates\gallery.html" />
+    <Content Include="db.sqlite3" />
+    <Content Include="media\albums\20150425_134200.jpg" />
+    <Content Include="media\albums\20150425_134214.jpg" />
+    <Content Include="media\albums\20170325_132028.jpg" />
+    <Content Include="media\albums\camino-de-santiago-09ea5095b3d8.jpg" />
+    <Content Include="media\albums\camino-de-santiago-1204c5c81fea.jpg" />
+    <Content Include="media\albums\camino-de-santiago-312fbb78a413.jpg" />
+    <Content Include="media\albums\camino-de-santiago-3cc9d9026e07.jpg" />
+    <Content Include="media\albums\camino-de-santiago-492c2a56206c.jpg" />
+    <Content Include="media\albums\camino-de-santiago-572506a1733f.jpg" />
+    <Content Include="media\albums\camino-de-santiago-5be1f5cebcbb.jpg" />
+    <Content Include="media\albums\camino-de-santiago-7a073bc08419.jpg" />
+    <Content Include="media\albums\camino-de-santiago-7fb82e14657c.jpg" />
+    <Content Include="media\albums\camino-de-santiago-a3c6785facee.jpg" />
+    <Content Include="media\albums\camino-de-santiago-a89fe281dde2.jpg" />
+    <Content Include="media\albums\camino-de-santiago-b0c49a377c68.jpg" />
+    <Content Include="media\albums\camino-de-santiago-bc006612330c.jpg" />
+    <Content Include="media\albums\camino-de-santiago-bc2952b60ca9.jpg" />
+    <Content Include="media\albums\camino-de-santiago-d04df06899fa.jpg" />
+    <Content Include="media\albums\camino-de-santiago-dfb0e040cc38.jpg" />
+    <Content Include="media\albums\camino-de-santiago-e2562ac438da.jpg" />
+    <Content Include="media\albums\camino-de-santiago-fb39f84866f5.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-2606aa5f4c73.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-278d0d690a26.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-4b7b5bee6c41.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-72e8f87dd4d9.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-74fe7fa7f289.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-7ad93ad6d37d.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-7c05954ebb18.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-a1acf6e7f272.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-a8910e56f0ae.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-ce46fde2a714.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-d2707079a86f.jpg" />
+    <Content Include="media\albums\glenveagh-national-park-dc13acbcbd1b.jpg" />
+    <Content Include="media\albums\IMG_0631.JPG" />
+    <Content Include="media\albums\IMG_4044.JPG" />
+    <Content Include="media\albums\IMG_7256.jpg" />
+    <Content Include="media\albums\kom-emine-051e53c9abd0.jpg" />
+    <Content Include="media\albums\kom-emine-205c1fa41155.jpg" />
+    <Content Include="media\albums\kom-emine-2947a68329ca.jpg" />
+    <Content Include="media\albums\kom-emine-2d1bbcd36c13.jpg" />
+    <Content Include="media\albums\kom-emine-65f2496ef776.jpg" />
+    <Content Include="media\albums\kom-emine-764825a089c2.jpg" />
+    <Content Include="media\albums\kom-emine-9e945ad2ef2e.jpg" />
+    <Content Include="media\albums\kom-emine-b1f1a9d639fd.jpg" />
+    <Content Include="media\albums\kom-emine-b20770626226.jpg" />
+    <Content Include="media\albums\kom-emine-b4594371ca27.jpg" />
+    <Content Include="media\albums\kom-emine-bcf12d69aaf1.jpg" />
+    <Content Include="media\albums\kom-emine-bcf5ef0854c7.jpg" />
+    <Content Include="media\albums\kom-emine-c3654ac0c2cb.jpg" />
+    <Content Include="media\albums\kom-emine-c97c67455f93.jpg" />
+    <Content Include="media\albums\kom-emine-dc0a0e0645ba.jpg" />
+    <Content Include="media\albums\kom-emine-e066231ac48e.jpg" />
+    <Content Include="media\albums\kom-emine-e978b5f3efc5.jpg" />
+    <Content Include="media\albums\kom-emine-fd6c8f5b0570.jpg" />
+    <Content Include="media\albums\kom-emine-ff5a7479d2cf.jpg" />
+    <Content Include="media\albums\rila-monastery-1661bc230fbf.jpg" />
+    <Content Include="media\albums\rila-monastery-16f2392c5012.jpg" />
+    <Content Include="media\albums\rila-monastery-29cdc177f55f.jpg" />
+    <Content Include="media\albums\rila-monastery-6e7e46e6de9c.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-09ea5095b3d8.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-1204c5c81fea.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-312fbb78a413.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-3cc9d9026e07.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-492c2a56206c.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-572506a1733f.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-5be1f5cebcbb.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-7a073bc08419.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-7fb82e14657c.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-a3c6785facee.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-a89fe281dde2.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-b0c49a377c68.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-bc006612330c.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-bc2952b60ca9.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-d04df06899fa.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-dfb0e040cc38.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-e2562ac438da.jpg" />
+    <Content Include="media\albums\thumb-camino-de-santiago-fb39f84866f5.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-2606aa5f4c73.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-278d0d690a26.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-4b7b5bee6c41.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-72e8f87dd4d9.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-74fe7fa7f289.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-7ad93ad6d37d.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-7c05954ebb18.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-a1acf6e7f272.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-a8910e56f0ae.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-ce46fde2a714.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-d2707079a86f.jpg" />
+    <Content Include="media\albums\thumb-glenveagh-national-park-dc13acbcbd1b.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-051e53c9abd0.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-205c1fa41155.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-2947a68329ca.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-2d1bbcd36c13.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-65f2496ef776.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-764825a089c2.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-9e945ad2ef2e.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-b1f1a9d639fd.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-b20770626226.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-b4594371ca27.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-bcf12d69aaf1.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-bcf5ef0854c7.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-c3654ac0c2cb.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-c97c67455f93.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-dc0a0e0645ba.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-e066231ac48e.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-e978b5f3efc5.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-fd6c8f5b0570.jpg" />
+    <Content Include="media\albums\thumb-kom-emine-ff5a7479d2cf.jpg" />
+    <Content Include="media\albums\thumb-rila-monastery-1661bc230fbf.jpg" />
+    <Content Include="media\albums\thumb-rila-monastery-16f2392c5012.jpg" />
+    <Content Include="media\albums\thumb-rila-monastery-29cdc177f55f.jpg" />
+    <Content Include="media\albums\thumb-rila-monastery-6e7e46e6de9c.jpg" />
+    <Content Include="requirements.txt" />
+    <Content Include="app\static\site.css" />
+    <Content Include="app\templates\layout.html" />
+    <Content Include="static\admin\css\base.css" />
+    <Content Include="static\admin\css\changelists.css" />
+    <Content Include="static\admin\css\dashboard.css" />
+    <Content Include="static\admin\css\fonts.css" />
+    <Content Include="static\admin\css\forms.css" />
+    <Content Include="static\admin\css\icons.css" />
+    <Content Include="static\admin\css\login.css" />
+    <Content Include="static\admin\css\rtl.css" />
+    <Content Include="static\admin\css\widgets.css" />
+    <Content Include="static\admin\fonts\LICENSE.txt" />
+    <Content Include="static\admin\fonts\README.txt" />
+    <Content Include="static\admin\fonts\Roboto-Bold-webfont.woff" />
+    <Content Include="static\admin\fonts\Roboto-Light-webfont.woff" />
+    <Content Include="static\admin\fonts\Roboto-Regular-webfont.woff" />
+    <Content Include="static\admin\img\calendar-icons.svg" />
+    <Content Include="static\admin\img\gis\move_vertex_off.svg" />
+    <Content Include="static\admin\img\gis\move_vertex_on.svg" />
+    <Content Include="static\admin\img\icon-addlink.svg" />
+    <Content Include="static\admin\img\icon-alert.svg" />
+    <Content Include="static\admin\img\icon-calendar.svg" />
+    <Content Include="static\admin\img\icon-changelink.svg" />
+    <Content Include="static\admin\img\icon-clock.svg" />
+    <Content Include="static\admin\img\icon-deletelink.svg" />
+    <Content Include="static\admin\img\icon-no.svg" />
+    <Content Include="static\admin\img\icon-unknown-alt.svg" />
+    <Content Include="static\admin\img\icon-unknown.svg" />
+    <Content Include="static\admin\img\icon-yes.svg" />
+    <Content Include="static\admin\img\inline-delete.svg" />
+    <Content Include="static\admin\img\LICENSE" />
+    <Content Include="static\admin\img\README.txt" />
+    <Content Include="static\admin\img\search.svg" />
+    <Content Include="static\admin\img\selector-icons.svg" />
+    <Content Include="static\admin\img\sorting-icons.svg" />
+    <Content Include="static\admin\img\tooltag-add.svg" />
+    <Content Include="static\admin\img\tooltag-arrowright.svg" />
+    <Content Include="static\admin\js\actions.js" />
+    <Content Include="static\admin\js\actions.min.js" />
+    <Content Include="static\admin\js\admin\DateTimeShortcuts.js" />
+    <Content Include="static\admin\js\admin\RelatedObjectLookups.js" />
+    <Content Include="static\admin\js\calendar.js" />
+    <Content Include="static\admin\js\cancel.js" />
+    <Content Include="static\admin\js\change_form.js" />
+    <Content Include="static\admin\js\collapse.js" />
+    <Content Include="static\admin\js\collapse.min.js" />
+    <Content Include="static\admin\js\core.js" />
+    <Content Include="static\admin\js\inlines.js" />
+    <Content Include="static\admin\js\inlines.min.js" />
+    <Content Include="static\admin\js\jquery.init.js" />
+    <Content Include="static\admin\js\popup_response.js" />
+    <Content Include="static\admin\js\prepopulate.js" />
+    <Content Include="static\admin\js\prepopulate.min.js" />
+    <Content Include="static\admin\js\prepopulate_init.js" />
+    <Content Include="static\admin\js\related-widget-wrapper.js" />
+    <Content Include="static\admin\js\SelectBox.js" />
+    <Content Include="static\admin\js\SelectFilter2.js" />
+    <Content Include="static\admin\js\timeparse.js" />
+    <Content Include="static\admin\js\urlify.js" />
+    <Content Include="static\admin\js\vendor\jquery\jquery.js" />
+    <Content Include="static\admin\js\vendor\jquery\jquery.min.js" />
+    <Content Include="static\admin\js\vendor\jquery\LICENSE-JQUERY.txt" />
+    <Content Include="static\admin\js\vendor\xregexp\LICENSE-XREGEXP.txt" />
+    <Content Include="static\admin\js\vendor\xregexp\xregexp.js" />
+    <Content Include="static\admin\js\vendor\xregexp\xregexp.min.js" />
+    <Content Include="static\app.js" />
+    <Content Include="static\external\photoswipe\default-skin\default-skin.css" />
+    <Content Include="static\external\photoswipe\default-skin\default-skin.png" />
+    <Content Include="static\external\photoswipe\default-skin\default-skin.svg" />
+    <Content Include="static\external\photoswipe\default-skin\preloader.gif" />
+    <Content Include="static\external\photoswipe\photoswipe-ui-default.min.js" />
+    <Content Include="static\external\photoswipe\photoswipe.css" />
+    <Content Include="static\external\photoswipe\photoswipe.min.js" />
+    <Content Include="static\images\lake.jpg" />
+    <Content Include="static\images\mountain.jpg" />
+    <Content Include="static\material\css\fixedHeader.dataTables.css" />
+    <Content Include="static\material\css\jquery.datetimepicker.css" />
+    <Content Include="static\material\css\material.forms.css" />
+    <Content Include="static\material\css\materialize.admin.css" />
+    <Content Include="static\material\css\materialize.admin.min.css" />
+    <Content Include="static\material\css\materialize.css" />
+    <Content Include="static\material\css\materialize.forms.css" />
+    <Content Include="static\material\css\materialize.frontend.css" />
+    <Content Include="static\material\css\materialize.frontend.min.css" />
+    <Content Include="static\material\css\perfect-scrollbar.css" />
+    <Content Include="static\material\css\responsive.dataTables.css" />
+    <Content Include="static\material\fonts\material-design-icons\codepoints" />
+    <Content Include="static\material\fonts\material-design-icons\material-icons.css" />
+    <Content Include="static\material\fonts\material-design-icons\MaterialIcons-Regular.eot" />
+    <Content Include="static\material\fonts\material-design-icons\MaterialIcons-Regular.ijmap" />
+    <Content Include="static\material\fonts\material-design-icons\MaterialIcons-Regular.svg" />
+    <Content Include="static\material\fonts\material-design-icons\MaterialIcons-Regular.ttf" />
+    <Content Include="static\material\fonts\material-design-icons\MaterialIcons-Regular.woff" />
+    <Content Include="static\material\fonts\material-design-icons\MaterialIcons-Regular.woff2" />
+    <Content Include="static\material\fonts\material-design-icons\README.md" />
+    <Content Include="static\material\fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="static\material\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="static\material\fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="static\material\fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="static\material\fonts\roboto\Roboto-Light.eot" />
+    <Content Include="static\material\fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="static\material\fonts\roboto\Roboto-Light.woff" />
+    <Content Include="static\material\fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="static\material\fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="static\material\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="static\material\fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="static\material\fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="static\material\fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="static\material\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="static\material\fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="static\material\fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="static\material\fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="static\material\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="static\material\fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="static\material\fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="static\material\imgs\favicon.png" />
+    <Content Include="static\material\imgs\logo.png" />
+    <Content Include="static\material\imgs\sidenav.svg" />
+    <Content Include="static\material\imgs\user.png" />
+    <Content Include="static\material\js\dataTables.fixedHeader.js" />
+    <Content Include="static\material\js\dataTables.responsive.js" />
+    <Content Include="static\material\js\jquery-2.2.0.js" />
+    <Content Include="static\material\js\jquery.activeNavigation.js" />
+    <Content Include="static\material\js\jquery.dataTables.js" />
+    <Content Include="static\material\js\jquery.datetimepicker.full.js" />
+    <Content Include="static\material\js\jquery.datetimepicker.js" />
+    <Content Include="static\material\js\jquery.formset.js" />
+    <Content Include="static\material\js\materialize.admin.js" />
+    <Content Include="static\material\js\materialize.admin.min.js" />
+    <Content Include="static\material\js\materialize.forms.js" />
+    <Content Include="static\material\js\materialize.frontend.js" />
+    <Content Include="static\material\js\materialize.frontend.min.js" />
+    <Content Include="static\material\js\materialize.js" />
+    <Content Include="static\material\js\perfect-scrollbar.jquery.js" />
+    <Content Include="static\material\js\turbolinks.js" />
+    <Content Include="static\material\sass\materialize.admin.scss" />
+    <Content Include="static\material\sass\materialize.forms.scss" />
+    <Content Include="static\material\sass\materialize.frontend.scss" />
+    <Content Include="static\material\sass\materialize.scss" />
+    <Content Include="static\material\sass\_variables.scss" />
+    <Content Include="static\site.css" />
+    <Content Include="static\social\social-facebook-black.svg" />
+    <Content Include="static\social\social-facebook.svg" />
+    <Content Include="static\social\social-github-black.svg" />
+    <Content Include="static\social\social-github.svg" />
+    <Content Include="static\social\social-googleplus-black.svg" />
+    <Content Include="static\social\social-googleplus.svg" />
+    <Content Include="static\social\social-linkedin-black.svg" />
+    <Content Include="static\social\social-linkedin.svg" />
+    <Content Include="static\social\social-pinterest-black.svg" />
+    <Content Include="static\social\social-pinterest.svg" />
+    <Content Include="static\social\social-rss-black.svg" />
+    <Content Include="static\social\social-rss.svg" />
+    <Content Include="static\social\social-twitter-black.svg" />
+    <Content Include="static\social\social-twitter.svg" />
+    <Content Include="static\social\social-youtube-black.svg" />
+    <Content Include="static\social\social-youtube.svg" />
+    <Content Include="static\Ubuntu-Italic.ttf" />
+    <Content Include="static\Ubuntu-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>{128000f8-dc92-49b7-ba37-49f04ca5854a}</Id>
+      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+      <Version>2.7</Version>
+      <Description>env (Python 2.7)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
