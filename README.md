@@ -33,6 +33,7 @@ Albums can be created from the Django admin panel where one zip file with all th
 ## Prerequisites
 
 - Django-Python [development environment](https://www.djangoproject.com/start/) already set up.
+- virtualenv installed.
 
 ## Solution
 
@@ -54,7 +55,7 @@ Version|Date|Comments
 ## Minimal Path to Awesome
 
 - Clone this repository.
-- Open the command line, navigate to the web part folder and execute:
+- Open the command line, navigate to the django app folder and execute:
     - `virtualenv env` (requires virtualenv)
     - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`
     - `pip install -r requirements.txt`
