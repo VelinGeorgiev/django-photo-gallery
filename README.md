@@ -2,8 +2,6 @@
 
 ![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.1-green.svg)
 
-[Demo](http://django-photo-gallery.velingeorgiev.pro)
-
 ## Summary
 
 This sample contains a Django 1.10.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
