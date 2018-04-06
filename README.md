@@ -1,10 +1,10 @@
 # Django Photo Gallery Sample #
 
-![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.1-green.svg)
+![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.3-green.svg)
 
 ## Summary
 
-This sample contains a Django 1.10.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
+This sample contains a Django 2.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
 
 ![Django Photo Gallery Sample](./assets/django_photo_gallery_explore.gif)
 
@@ -21,11 +21,10 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 ## Additional Django apps dependencies
 - Pillow
-- django-material
 - django-imagekit
 
 ## Additional JavaScript apps dependencies
-- jquery
+- swiper
 - photoswipe
 
 ## Prerequisites
@@ -45,6 +44,7 @@ Version|Date|Comments
 -------|----|--------
 0.0.1|April 30, 2017 | Initial commit
 0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
+0.0.3|April 07, 2018 | django-material replaced with Swiper and milligram
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
@@ -67,7 +67,7 @@ Version|Date|Comments
 
 This Sample illustrates the following concepts on top of the Django Framework:
 
-- Using django-material and materializecss for building Django UI.
+- Using milligram and swiper for building Django any device ready UI.
 - Using django-imagekit for building resizing images.
 - Using photoswipe javascript library for more rich image gallery user experience.
 
