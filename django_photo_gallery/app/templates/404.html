@@ -1,0 +1,22 @@
+{% block seo %}
+    <meta name="robots" content="noindex" />
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <h1>Page not found.</h1>
+            <div>
+                <a href="{% url 'gallery' %}" class="button">Back to home</a>
+            </div>
+        </div>
+        <div class="column">
+            <img src="/static/images/velin-georgiev-fluffy.jpg" alt="Velin Georgiev's blog Page Not Found fluffy" />
+        </div>
+     </div>
+</div>
+
+{% endblock %}
+
