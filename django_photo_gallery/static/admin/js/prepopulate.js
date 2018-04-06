@@ -26,15 +26,7 @@
                         values.push(field.val());
                     }
                 });
-                var value = URLify(values.join(' '), maxLength, allowUnicode);
-                prepopulatedField.val(value);
-                if(value) {
-                    prepopulatedField.addClass('active');
-                    prepopulatedField.next().addClass('active');
-                } else {
-                    prepopulatedField.removeClass('active');
-                    prepopulatedField.next().removeClass('active');
-                }
+                prepopulatedField.val(URLify(values.join(' '), maxLength, allowUnicode));
             };
 
             prepopulatedField.data('_changed', false);

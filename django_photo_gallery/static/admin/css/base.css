@@ -187,9 +187,13 @@ p.mini {
     margin-top: -3px;
 }
 
-.help, p.help, form p.help {
+.help, p.help, form p.help, div.help, form div.help, div.help li {
     font-size: 11px;
     color: #999;
+}
+
+div.help ul {
+     margin-bottom: 0;
 }
 
 .help-tooltip {
@@ -410,13 +414,16 @@ input, textarea, select, .form-row p, form .button {
     font-weight: normal;
     font-size: 13px;
 }
+.form-row div.help {
+    padding: 2px 3px;
+}
 
 textarea {
     vertical-align: top;
 }
 
 input[type=text], input[type=password], input[type=email], input[type=url],
-input[type=number], textarea, select, .vTextField {
+input[type=number], input[type=tel], textarea, select, .vTextField {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 5px 6px;
@@ -424,8 +431,8 @@ input[type=number], textarea, select, .vTextField {
 }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,
-input[type=url]:focus, input[type=number]:focus, textarea:focus, select:focus,
-.vTextField:focus {
+input[type=url]:focus, input[type=number]:focus, input[type=tel]:focus,
+textarea:focus, select:focus, .vTextField:focus {
     border-color: #999;
 }
 
@@ -731,7 +738,7 @@ a.deletelink:focus, a.deletelink:hover {
 
 .object-tools a.viewsitelink, .object-tools a.golink,.object-tools a.addlink {
     background-repeat: no-repeat;
-    background-position: 93% center;
+    background-position: right 7px center;
     padding-right: 26px;
 }
 

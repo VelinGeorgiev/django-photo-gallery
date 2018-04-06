@@ -1,42 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load staticfiles %}
-    
-    {% include 'material/includes/material_css.html' %}
-    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" />
-    {% block css %}{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load staticfiles %} {% include 'material/includes/material_css.html' %}
+    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" /> {% block css %}{% endblock %}
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="{% url 'gallery' %}" class="brand-logo" style="padding-left:1rem;">
-                Django Photo Gallery
-            </a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse">
-                <i class="material-icons">menu</i>
-            </a>
+    <nav role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Django Photo Gallery</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li>
+                    <a href="#">Navbar Link</a>
+                </li>
             </ul>
 
-            <ul class="side-nav" id="mobile-demo">
+            <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
                 <li>
-                    <div class="userView">
-                        <div class="background"></div>
-                        <span class="white-text name">Django Photo Gallery</span>
-                    </div>
+                    <a href="#">Navbar Link</a>
                 </li>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contacts</a></li>
             </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
         </div>
     </nav>
 
@@ -70,9 +59,9 @@
     </footer>
 
     <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
     {% include 'material/includes/material_js.html' %}
-    <script src="{% static 'app.js' %}"></script>
-
-    {% block js %}{% endblock %}
+    <script src="{% static 'app.js' %}"></script> {% block js %}{% endblock %}
 </body>
+
 </html>

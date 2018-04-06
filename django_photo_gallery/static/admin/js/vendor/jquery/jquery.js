@@ -1243,7 +1243,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
 
-			// Opera 10-11 does not throw on album-comma invalid pseudos
+			// Opera 10-11 does not throw on post-comma invalid pseudos
 			div.querySelectorAll("*,:x");
 			rbuggyQSA.push(",.*:");
 		});
@@ -2239,17 +2239,17 @@ function condense( unmatched, map, filter, context, xml ) {
 	return newUnmatched;
 }
 
-function setMatcher( preFilter, selector, matcher, albumFilter, albumFinder, albumSelector ) {
-	if ( albumFilter && !albumFilter[ expando ] ) {
-		albumFilter = setMatcher( albumFilter );
+function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postSelector ) {
+	if ( postFilter && !postFilter[ expando ] ) {
+		postFilter = setMatcher( postFilter );
 	}
-	if ( albumFinder && !albumFinder[ expando ] ) {
-		albumFinder = setMatcher( albumFinder, albumSelector );
+	if ( postFinder && !postFinder[ expando ] ) {
+		postFinder = setMatcher( postFinder, postSelector );
 	}
 	return markFunction(function( seed, results, context, xml ) {
 		var temp, i, elem,
 			preMap = [],
-			albumMap = [],
+			postMap = [],
 			preexisting = results.length,
 
 			// Get initial elements from seed or context
@@ -2261,8 +2261,8 @@ function setMatcher( preFilter, selector, matcher, albumFilter, albumFinder, alb
 				elems,
 
 			matcherOut = matcher ?
-				// If we have a albumFinder, or filtered seed, or non-seed albumFilter or preexisting results,
-				albumFinder || ( seed ? preFilter : preexisting || albumFilter ) ?
+				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
+				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
 
 					// ...intermediate processing is necessary
 					[] :
@@ -2276,24 +2276,24 @@ function setMatcher( preFilter, selector, matcher, albumFilter, albumFinder, alb
 			matcher( matcherIn, matcherOut, context, xml );
 		}
 
-		// Apply albumFilter
-		if ( albumFilter ) {
-			temp = condense( matcherOut, albumMap );
-			albumFilter( temp, [], context, xml );
+		// Apply postFilter
+		if ( postFilter ) {
+			temp = condense( matcherOut, postMap );
+			postFilter( temp, [], context, xml );
 
 			// Un-match failing elements by moving them back to matcherIn
 			i = temp.length;
 			while ( i-- ) {
 				if ( (elem = temp[i]) ) {
-					matcherOut[ albumMap[i] ] = !(matcherIn[ albumMap[i] ] = elem);
+					matcherOut[ postMap[i] ] = !(matcherIn[ postMap[i] ] = elem);
 				}
 			}
 		}
 
 		if ( seed ) {
-			if ( albumFinder || preFilter ) {
-				if ( albumFinder ) {
-					// Get the final matcherOut by condensing this intermediate into albumFinder contexts
+			if ( postFinder || preFilter ) {
+				if ( postFinder ) {
+					// Get the final matcherOut by condensing this intermediate into postFinder contexts
 					temp = [];
 					i = matcherOut.length;
 					while ( i-- ) {
@@ -2302,29 +2302,29 @@ function setMatcher( preFilter, selector, matcher, albumFilter, albumFinder, alb
 							temp.push( (matcherIn[i] = elem) );
 						}
 					}
-					albumFinder( null, (matcherOut = []), temp, xml );
+					postFinder( null, (matcherOut = []), temp, xml );
 				}
 
 				// Move matched elements from seed to results to keep them synchronized
 				i = matcherOut.length;
 				while ( i-- ) {
 					if ( (elem = matcherOut[i]) &&
-						(temp = albumFinder ? indexOf( seed, elem ) : preMap[i]) > -1 ) {
+						(temp = postFinder ? indexOf( seed, elem ) : preMap[i]) > -1 ) {
 
 						seed[temp] = !(results[temp] = elem);
 					}
 				}
 			}
 
-		// Add elements to results, through albumFinder if defined
+		// Add elements to results, through postFinder if defined
 		} else {
 			matcherOut = condense(
 				matcherOut === results ?
 					matcherOut.splice( preexisting, matcherOut.length ) :
 					matcherOut
 			);
-			if ( albumFinder ) {
-				albumFinder( null, results, matcherOut, xml );
+			if ( postFinder ) {
+				postFinder( null, results, matcherOut, xml );
 			} else {
 				push.apply( results, matcherOut );
 			}
@@ -4746,9 +4746,9 @@ jQuery.event = {
 			}
 		}
 
-		// Call the albumDispatch hook for the mapped type
-		if ( special.albumDispatch ) {
-			special.albumDispatch.call( this, event );
+		// Call the postDispatch hook for the mapped type
+		if ( special.postDispatch ) {
+			special.postDispatch.call( this, event );
 		}
 
 		return event.result;
@@ -4940,7 +4940,7 @@ jQuery.event = {
 		},
 
 		beforeunload: {
-			albumDispatch: function( event ) {
+			postDispatch: function( event ) {
 
 				// Support: Firefox 20+
 				// Firefox doesn't alert if the returnValue field is not set.
@@ -8821,7 +8821,7 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "get", "album" ], function( i, method ) {
+jQuery.each( [ "get", "post" ], function( i, method ) {
 	jQuery[ method ] = function( url, data, callback, type ) {
 
 		// Shift arguments if data argument was omitted
@@ -9442,7 +9442,7 @@ jQuery.fn.load = function( url, params, callback ) {
 
 	// Otherwise, build a param string
 	} else if ( params && typeof params === "object" ) {
-		type = "album";
+		type = "POST";
 	}
 
 	// If we have elements to modify, make the request

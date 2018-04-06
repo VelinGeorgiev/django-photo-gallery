@@ -24,7 +24,7 @@ class Album(models.Model):
 class AlbumImage(models.Model):
     image = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(1280)], format='JPEG', options={'quality': 70})
     thumb = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 80})
-    album = models.ForeignKey('album')
+    album = models.ForeignKey('album', on_delete=models.PROTECT)
     alt = models.CharField(max_length=255, default=uuid.uuid4)
     created = models.DateTimeField(auto_now_add=True)
     width = models.IntegerField(default=0)
