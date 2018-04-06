@@ -16,8 +16,8 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 
 ## Tested with Django / Python
-![Python](https://img.shields.io/badge/Python-2.7-green.svg)
-![Django](https://img.shields.io/badge/Django-1.10.5-green.svg)
+![Python](https://img.shields.io/badge/Python-2.3.6-green.svg)
+![Django](https://img.shields.io/badge/Django-2.0.4-green.svg)
 
 ## Additional Django apps dependencies
 - Pillow
@@ -44,6 +44,7 @@ Django Photo Gallery | Velin Georgiev ([@VelinGeorgiev](https://twitter.com/veli
 Version|Date|Comments
 -------|----|--------
 0.0.1|April 30, 2017 | Initial commit
+0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
