@@ -1,4 +1,4 @@
-﻿/* Custom fonts */
+﻿/* Custom fonts
 @font-face {
   font-family: Ubuntu;
   src: local("Ubuntu"),
@@ -12,10 +12,10 @@
        url(Ubuntu-Italic.ttf);
 }
 
-/* Tag overrrides */
+
 body, h1, h2, h3, h4, h5{
     font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 
 h1{
     font-size: 3.0rem;
@@ -33,11 +33,6 @@ h3{
 strong {
     font-size: 1.1em;
     color: darkblue;
-}
-
-/* Materializecss overrrides */
-.carousel-slider {
-    height: 400px !important;
 }
 
 /* Custom styles overrrides */
@@ -72,3 +67,137 @@ strong {
 .dpg-album-card, .dpg-album-image {
     max-width:300px;
 }
+
+
+/* Include this stylesheet after Milligram or merge it with your main.css */
+
+body {
+    font-family: 'Trebuchet MS', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    padding-top: 1rem;
+    font-size: 2.6rem;
+}
+
+h3 {
+    padding-top: 1rem;
+    font-size: 2.2rem;
+}
+
+.navigation .title, .navigation-title {
+    color: #f2f2f2;
+}
+
+.navigation {
+    background: #34373C;
+    border-bottom: .1rem solid #1B1C1D;
+}
+
+.header {
+    background-color: #141518;
+}
+
+pre {
+    background: #141518;
+}
+
+.prettyprint {
+    color: #f2f2f2;
+}
+
+    .prettyprint.lang-md * {
+        color: #f2f2f2 !important;
+    }
+
+code {
+    background: #141518;
+}
+
+.prettyprint .atv {
+    color: rgba(73, 158, 223, 1);
+}
+
+blockquote, dl, figure, form, ol, p, pre, table, ul {
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* Custom classes */
+
+.opaque {
+    /* Theoretically for IE 8 & 9 (more valid) */
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=60);
+    /* Modern Browsers */
+    opacity: 0.6;
+}
+
+img {
+    margin-bottom: 1rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.social {
+    width: 64px;
+    margin-right: 3px;
+}
+
+.mcsd-cert {
+    max-height: 100px;
+}
+
+.scrum-cert {
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.menu-icon {
+    max-width: 32px;
+}
+
+.comment {
+    font-weight: 600
+}
+
+.padding-top-1 {
+    padding-top: 1rem;
+}
+
+.post-thumb {
+    max-width: 200px;
+}
+
+.github-icon {
+    max-width: 48px;
+}
+
+/* Responsive Youtube video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom:1rem;
+}
+
+    .video-container iframe, .video-container object, .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }

@@ -1,37 +1,31 @@
-{% extends "layout.html" %}
-{% load staticfiles %}
+{% extends "layout.html" %} {% load staticfiles %} {% block content %}
 
-{% block content %}
-
-<div class="slider">
-    <ul class="slides">
-        <li>
-            <img src="{% static 'images/mountain.jpg' %}" alt="Django Photo Gallery" class="opaque">
-            <div class="caption center-align">
-                <h1>
-                    Django Photo Gallery Sample<br/>
-                    <small class="light text-lighten-3 hide-on-small-only">Build photo gallery in seconds.</small>
-                </h1>
-                
-            </div>
-        </li>
-        <li>
-            <img src="{% static 'images/lake.jpg' %}" alt="Django Photo Gallery" class="opaque">
-            <div class="caption left-align">
-                <h1>
-                    Designed to be mobile<br />
-                    <small class="light text-lighten-3 hide-on-small-only">Optimized images to load on every device.</small>
-                </h1>
-            </div>
-        </li>
-    </ul>
-</div>
 <div class="container">
+    <div class="row">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="parallax-bg" style="background-image:url(static/images/mountain.jpg)"  data-swiper-parallax="-23%"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="title" data-swiper-parallax="-300">Django Photo Gallery Sample</div>
+                    <div class="subtitle" data-swiper-parallax="-200">Optimized images and assets for quick load.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Designed to be mobile</div>
+                    <div class="subtitle" data-swiper-parallax="-200">Most modern mobile touch support</div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+        </div>
+        <!-- {% static 'images/lake.jpg' %} -->
+    </div>
+
     <div class="row">
         {% for album in albums %}
 
         <div class="col">
-            <div class="card dpg-album-card">
+            <div class="dpg-album-card">
                 <div class="card-image">
                     <img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="dpg-album-card-image" />
                 </div>
@@ -46,22 +40,17 @@
                 </div>
             </div>
         </div>
-
         {% endfor %}
+    </div>
 
+    <div class="pagination center">
+        <span class="step-links">
+            {% if albums.has_previous %}
+            <a href="?page={{ albums.previous_page_number }}" class="waves-effect waves-light btn btn-large">Previous</a>
+            {% endif %} {% if albums.has_next %}
+            <a href="?page={{ albums.next_page_number }}" class="waves-effect waves-light btn btn-large">Next</a>
+            {% endif %}
+        </span>
     </div>
 </div>
-
-<div class="pagination center">
-    <span class="step-links">
-        {% if albums.has_previous %}
-        <a href="?page={{ albums.previous_page_number }}" class="waves-effect waves-light btn btn-large">Previous</a>
-        {% endif %}
-
-        {% if albums.has_next %}
-        <a href="?page={{ albums.next_page_number }}" class="waves-effect waves-light btn btn-large">Next</a>
-        {% endif %}
-    </span>
-</div>
-
 {% endblock %}

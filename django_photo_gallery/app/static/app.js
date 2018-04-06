@@ -1,9 +1,14 @@
-﻿$(document).ready(function () {
-
-    $(".sidenav").sidenav();
-
-    $('.slider').slider();
-});
+﻿// Initializes the home page slider
+var homeSliderInit = function () {
+    new Swiper('.swiper-container', {
+        speed: 600,
+        parallax: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+}
 
 // Initializes PhotoSwipe.
 var pswpInit = function (startsAtIndex) {
@@ -45,3 +50,7 @@ var pswpInit = function (startsAtIndex) {
         gallery.init();
     }
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    homeSliderInit();
+});
