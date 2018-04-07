@@ -1,46 +1,31 @@
 {% extends "layout.html" %} {% load staticfiles %} {% block content %}
 
+<h1 class="title">Django Photo Gallery Sample <small>Responsive, simplistic, optimized for performance photo gallery with most modern mobile touch support.</small></h1>
 <div class="container">
-    <div class="row">
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="parallax-bg" style="background-image:url(static/images/mountain.jpg)"  data-swiper-parallax="-23%"></div>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="title" data-swiper-parallax="-300">Django Photo Gallery Sample</div>
-                    <div class="subtitle" data-swiper-parallax="-200">Optimized images and assets for quick load.</div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Designed to be mobile</div>
-                    <div class="subtitle" data-swiper-parallax="-200">Most modern mobile touch support</div>
-                </div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination swiper-pagination-white"></div>
-        </div>
-        <!-- {% static 'images/lake.jpg' %} -->
+        
+    <div class="row">    
+            
+            
+            
+            
+        
     </div>
-
     <div class="row">
+            <ul class="cards">
         {% for album in albums %}
 
-        <div class="col">
-            <div class="dpg-album-card">
-                <div class="card-image">
-                    <img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="dpg-album-card-image" />
+        <li class="cards__item">
+                <div class="card">
+                  <img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__title">{{ album.title }}</div>
+                    <p class="card__text">{{ album.description|truncatechars:120 }}</p>
+                    <a class="button" href="{% url 'album' album.slug %}">More Images</a>
+                  </div>
                 </div>
-                <div class="card-content">
-                    <span class="card-title">{{ album.title }}</span>
-                    <p>{{ album.description|truncatechars:120 }}</p>
-                </div>
-                <div class="card-action">
-                    <a href="{% url 'album' album.slug %}">
-                        More Images
-                    </a>
-                </div>
-            </div>
-        </div>
+              </li>
         {% endfor %}
+    </ul>
     </div>
 
     <div class="pagination center">
