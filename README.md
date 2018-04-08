@@ -16,7 +16,7 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 
 ## Tested with Django / Python
-![Python](https://img.shields.io/badge/Python-2.3.6-green.svg)
+![Python](https://img.shields.io/badge/Python-3.6-green.svg)
 ![Django](https://img.shields.io/badge/Django-2.0.4-green.svg)
 
 ## Additional Django apps dependencies
