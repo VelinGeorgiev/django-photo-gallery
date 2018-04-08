@@ -1,6 +1,6 @@
 # Django Photo Gallery Sample #
 
-![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.3-green.svg)
+![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.4-green.svg)
 
 ## Summary
 
@@ -22,6 +22,7 @@ Albums can be created from the Django admin panel where one zip file with all th
 ## Additional Django apps dependencies
 - Pillow
 - django-imagekit
+- django_compressor
 
 ## Additional JavaScript apps dependencies
 - photoswipe
@@ -44,6 +45,7 @@ Version|Date|Comments
 0.0.1|April 30, 2017 | Initial commit
 0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
 0.0.3|April 07, 2018 | django-material replaced with milligram
+0.0.4|April 08, 2018 | seo and compression optimizations
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
@@ -57,7 +59,7 @@ Version|Date|Comments
     - `virtualenv env` (requires virtualenv)
     - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`
     - `pip install -r requirements.txt`
-    - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-3.0.0-cp27-none-win32.whl` (if you are not using python 2.7 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
+    - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-5.0.0-cp27-none-win32.whl` (if you are not using python 2.7 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
     - `python manage.py runserver`
     - Open http://127.0.0.1:8000/ in web browser.
     - To access the admin forms go to http://127.0.0.1:8000/admin/ and enter user: admin, password: administrator
@@ -90,6 +92,10 @@ This is sample. I decided to keep it simple and let the validation to be added b
 - Card css https://codepen.io/mcraiganthony/pen/NxGxqm
 - Some more nice cards css https://codepen.io/szpakoli/pen/xbJjdR, https://codepen.io/nodws/pen/ZpZjpQ
 - Even more cards css http://freefrontend.com/css-cards/
+
+## Contributions are welcome
+
+Feel free to submit a pull request to improve the program. Please note, this sample is meant to be fast so pull requests that might impact load times will have to be refactored.
 
 ## Sharing is Caring
 
