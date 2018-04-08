@@ -2,6 +2,64 @@
 {% load staticfiles %} 
 {% load compress %}
 
+{% block seo %}
+    <title>{{ album.title }} - Ireland Views</title>
+    <meta name="description" content="{{ album.description }}">
+    <meta name="keywords" content="{{ album.tags }}"/>
+
+    <meta property="og:title" content="{{ album.title }} - Ireland Views">
+    <meta property="og:description" content="{{ album.description }}">
+    <meta property="og:url" content="http://{{ request.get_host }}{% url 'album' album.slug %}">
+    <meta property="og:image" content="http://{{ request.get_host }}{{ image }}">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="450">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ album.title }} - Ireland Views" />
+    <meta name="twitter:description" content="{{ album.description }}" />
+    <meta name="twitter:url" content="http://{{ request.get_host }}{% url 'album' album.slug %}" />
+    <meta name="twitter:image" content="http://{{ request.get_host }}{{ image }}" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "tripsalbuming",
+        "headline": "{{ album.title }} - Ireland Views",
+        "datePublished": "{{ album.created|date:"Y-m-d"}}",
+        "dateModified": "{{ album.created|date:"Y-m-d"}}",
+        "author": {
+          "@type": "Person",
+          "name": "Ireland Views"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http://{{ request.get_host }}{% url 'album' album.slug %}"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://{{ request.get_host }}{{ image }}",
+          "width": 800,
+          "height": 800
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ireland Views",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://{{ request.get_host }}/static/images/Ireland-Views-Logo.jpg",
+            "width": 55,
+            "height": 60
+          }
+        },
+        "description": "{{ album.description }}"
+      }
+    </script>
+{% endblock %}
+
+{% block canonical %}
+    <link rel="canonical" href="http://{{ request.get_host }}{% url 'album' album.slug %}">
+{% endblock %}
+
 {% block css %}
     {% compress css inline %}
         <link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}">
