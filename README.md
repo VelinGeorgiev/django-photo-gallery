@@ -6,6 +6,8 @@
 
 This sample contains a Django 2.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
 
+[Demo here](http://django-photo-gallery.velingeorgiev.com/)
+
 ![Django Photo Gallery Sample](./assets/django_photo_gallery_explore.gif)
 
 ### Create an album from the Django admin panel
