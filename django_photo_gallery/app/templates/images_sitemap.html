@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% spaceless %}
+  {% for url in urlset %}
+      <url>
+        <loc>{{ url.location }}</loc>
+        {% for image in url.item.images %}
+        <image:image>
+          <image:title>{{ url.item.title }}</image:title>
+          <image:caption>{{ url.item.caption }}</image:caption>
+          <image:loc>http://{{ request.get_host }}{{image.image.url}}</image:loc>
+          {# <image:geo_location>{{ url.item.geo_location }}</image:geo_location> #}
+        </image:image>
+        {% endfor %}
+      </url> 
+  {% endfor %}
+  {% endspaceless %}
+</urlset> 

@@ -4,19 +4,20 @@ import uuid
 from django.db import models
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFit
+from django.urls import reverse
 
 class Album(models.Model):
     title = models.CharField(max_length=70)
-    description = models.TextField(max_length=1024)
+    description = models.TextField(max_length=8192)
     thumb = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(300)], format='JPEG', options={'quality': 90})
     tags = models.CharField(max_length=250)
     is_visible = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=70, unique=True)
 
-    #def get_absolute_url(self):
-    #    return reverse('album', kwargs={'slug':self.slug})
+    def get_absolute_url(self):
+        return reverse('album', kwargs={'slug': self.slug})
 
     def __unicode__(self):
         return self.title
