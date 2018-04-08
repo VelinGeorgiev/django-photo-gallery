@@ -1,30 +1,37 @@
 {% extends "layout.html" %} {% load staticfiles %} {% block css %}
-<link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}">
-<link rel="stylesheet" href="{% static 'external/photoswipe/default-skin/default-skin.css' %}"> {% endblock %} {% block content %} {% if album.is_visible %}
+{% endblock %} {% block content %} {% if album.is_visible %}
 
-<article class="container">
-    <header class="row">
+<article>
+    <header>
         <h1>{{ album.title }}</h1>
     </header>
-    <section class="row">
-        <div class="container">
-            <p class="row">{{ album.description }}</p>
-            <div class="row">
+    <section>
+        <div class="row">
+            <p>{{ album.description }}</p>
+        </div>
+        <div class="row">
+            <ul class="cards">
                 {% for item in images %}
-                <a href="javascript:pswpInit({{ forloop.counter0 }});">
-                    <img src="{{ item.thumb.url }}" class="responsive-img dpg-album-image" alt="{{ item.alt }}" />
-                </a>
+                <li class="cards__item">
+                    <div class="card">
+                        <a href="javascript:pswpInit({{ forloop.counter0 }});">
+                            <img src="{{ item.thumb.url }}" alt="{{ item.alt }}" />
+                        </a>
+                        <div class="card__content">
+                            <p class="card__text">{{ item.alt }}</p>
+                        </div>
+                    </div>
+                </li>
                 {% endfor %}
-            </div>
+            </ul>
         </div>
     </section>
-    <footer class="row">
+    <footer>
         Created on
         <time datetime="{{ album.created|date:" Y-m-d " }}">{{ album.created|date:"d M Y" }}</time>
         <p>Tags: {{ album.tags }}</p>
     </footer>
 </article>
-
 
 <!-- PhotoSwipe -->
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
@@ -95,20 +102,18 @@
 </div>
 {% else %}
 <h3>This album is temporarily unavailable.</h3>
-{% endif %} 
-{% endblock %} 
-{% block scripts %}
+{% endif %} {% endblock %} {% block scripts %}
+<link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}">
+<link rel="stylesheet" href="{% static 'external/photoswipe/default-skin/default-skin.css' %}"> 
 <script>
     // build the json album images collection 
     window.djangoAlbumImages = [
         {% for item in images %}
-    {
-        src: '{{ item.image.url }}',
-        w: {{ item.width }},
-        h: {{ item.height }}
-    },
-    {% endfor %}
+            { src: '{{ item.image.url }}', w: {{ item.width }}, h: {{ item.height }} },
+        {% endfor %}
         ];
 </script>
 <script src="{% static 'external/photoswipe/photoswipe.min.js' %}"></script>
-<script src="{% static 'external/photoswipe/photoswipe-ui-default.min.js' %}"></script> {% endblock %}
+<script src="{% static 'external/photoswipe/photoswipe-ui-default.min.js' %}"></script> 
+<script src="{% static 'app.js' %}"></script>
+{% endblock %}

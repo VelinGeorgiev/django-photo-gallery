@@ -24,7 +24,6 @@ Albums can be created from the Django admin panel where one zip file with all th
 - django-imagekit
 
 ## Additional JavaScript apps dependencies
-- swiper
 - photoswipe
 
 ## Prerequisites
@@ -44,7 +43,7 @@ Version|Date|Comments
 -------|----|--------
 0.0.1|April 30, 2017 | Initial commit
 0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
-0.0.3|April 07, 2018 | django-material replaced with Swiper and milligram
+0.0.3|April 07, 2018 | django-material replaced with milligram
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
@@ -67,7 +66,7 @@ Version|Date|Comments
 
 This Sample illustrates the following concepts on top of the Django Framework:
 
-- Using milligram and swiper for building Django any device ready UI.
+- Using milligram for building Django any device ready UI.
 - Using django-imagekit for building resizing images.
 - Using photoswipe javascript library for more rich image gallery user experience.
 
@@ -86,6 +85,11 @@ To cleanup the sample data delete the sql lite database and the media folder fil
 
 ## No validation on the form
 This is sample. I decided to keep it simple and let the validation to be added by you.
+
+## Useful links
+- Card css https://codepen.io/mcraiganthony/pen/NxGxqm
+- Some more nice cards css https://codepen.io/szpakoli/pen/xbJjdR, https://codepen.io/nodws/pen/ZpZjpQ
+- Even more cards css http://freefrontend.com/css-cards/
 
 ## Sharing is Caring
 

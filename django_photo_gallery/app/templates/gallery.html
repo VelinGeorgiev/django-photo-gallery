@@ -1,31 +1,25 @@
 {% extends "layout.html" %} {% load staticfiles %} {% block content %}
 
-<h1 class="title">Django Photo Gallery Sample <small>Responsive, simplistic, optimized for performance photo gallery with most modern mobile touch support.</small></h1>
+<h1 class="title">
+    Responsive, simplistic, optimized for performance photo gallery
+</h1>
 <div class="container">
-        
-    <div class="row">    
-            
-            
-            
-            
-        
-    </div>
     <div class="row">
-            <ul class="cards">
-        {% for album in albums %}
+        <ul class="cards">
+            {% for album in albums %}
 
-        <li class="cards__item">
+            <li class="cards__item">
                 <div class="card">
-                  <img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="card__image" />
-                  <div class="card__content">
-                    <div class="card__title">{{ album.title }}</div>
-                    <p class="card__text">{{ album.description|truncatechars:120 }}</p>
-                    <a class="button" href="{% url 'album' album.slug %}">More Images</a>
-                  </div>
+                    <img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="card__image" />
+                    <div class="card__content">
+                        <div class="card__title">{{ album.title }}</div>
+                        <p class="card__text">{{ album.description|truncatechars:120 }}</p>
+                        <a class="button" href="{% url 'album' album.slug %}">More Images</a>
+                    </div>
                 </div>
-              </li>
-        {% endfor %}
-    </ul>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 
     <div class="pagination center">
