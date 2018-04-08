@@ -30,7 +30,3 @@ class AlbumDetail(DetailView):
         # Add in a QuerySet of all the images
         context['images'] = AlbumImage.objects.filter(album=self.object.id)
         return context
-
-def handler404(request):
-    assert isinstance(request, HttpRequest)
-    return render(request, 'handler404.html', None, None, 404)

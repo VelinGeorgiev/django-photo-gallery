@@ -5,13 +5,102 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load staticfiles %} {% block seo %}
-    <title>Django Photo Gallery</title>
-    <meta name="description" content="Python photo gallery site and images are optimized for performance.">
-    <meta property="og:title" content="Django Photo Gallery">
-    <meta property="og:description" content="Python photo gallery site and images are optimized for performance.">
-    <meta property="og:url" content="https://github.com/VelinGeorgiev/django-photo-gallery">
-    <link rel="canonical" href="{{ request.build_absolute_uri }}"> {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% load staticfiles %} 
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load staticfiles %}
+    {% load compress %}
+
+    {% block seo %}
+        <title>Ireland Views | Travel to Ireland with family | Ireland Sightseeing</title>
+        <meta name="description" content="Explore Ireland's wildest and most beautiful corner."/>
+        <meta name="keywords" content="Ireland, Donegal, Letterkenny, Ireland trip, cruise, Ireland tour, travel to Ireland, Ireland trek, visit Ireland, Ireland for weekend, outdoor, stay, Ireland holiday, Ireland vacation, layoff, fiesta, time off, leave, recreation, break, things to do, Ireland Overview, advice, attractions, reviews, guide"/>
+
+        <meta property="og:title" content="Ireland Views | Travel to Ireland with family | Ireland Sightseeing">
+        <meta property="og:description" content="Explore Ireland's wildest and most beautiful corner.">
+        <meta property="og:url" content="http://{{ request.get_host }}">
+        <meta property="og:image" content="http://{{ request.get_host }}{% static 'images/Ireland-Views-Logo.jpg' %}">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="450">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Ireland Views | Travel to Ireland with family | Ireland Sightseeing" />
+        <meta name="twitter:description" content="Explore Ireland's wildest and most beautiful corner." />
+        <meta name="twitter:url" content="http://{{ request.get_host }}{% static 'images/Ireland-Views-Logo.jpg' %}" />
+        <meta name="twitter:image" content="http://{{ request.get_host }}" />
+    
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Website",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Ireland Views",
+                "logo": "http://{{ request.get_host }}{% static 'images/Ireland-Views-Logo.jpg' %}"
+            },
+            "url": "http://{{ request.get_host }}",
+            "image": {
+                "@type": "ImageObject",
+                "url": "http://{{ request.get_host }}{% static 'images/Ireland-Views-Logo.jpg' %}",
+                "width": 490,
+                "height": 490
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "http://{{ request.get_host }}"
+            },
+            "description": "Explore Ireland's wildest and most beautiful corner."
+        }
+    </script>
+    {% endblock %}
+
+    {% block canonical %}
+        <link rel="canonical" href="http://{{ request.get_host }}">
+    {% endblock %}
+
+    <link rel="manifest" href="{% static 'icons/manifest.json' %}">
+    <meta name="msapplication-config" content="{% static 'icons/browserconfig.xml' %}" />
+    <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}">
+    <meta http-equiv="Content-Language" content="en">
+    <meta property="fb:page_id" content="1334553816592146">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Ireland Views" />
+
+    <meta name="twitter:site" content="@IrelandViews">
+    <meta name="twitter:creator" content="@VelinGeorgiev">
+    <meta name="twitter:account_id" content="864615440982704128">
+
+    <meta name="author" content="Ireland Views">
+    <link rel="me" type="text/html" href="https://github.com/VelinGeorgiev">
+    <link rel="me" type="text/html" href="https://www.linkedin.com/in/velingeorgiev">
+    <link rel="me" type="text/html" href="https://twitter.com/velingeorgiev">
+
+    <link rel="apple-touch-icon" href="{% static 'icons/apple-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'icons/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'icons/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'icons/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'icons/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'icons/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'icons/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'icons/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'icons/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'icons/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'icons/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icons/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#75AE3E">
+    <meta name="msapplication-TileImage" content="{% static 'icons/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#75AE3E">
+
+    {% compress css inline %}
+    <link rel="stylesheet" href="{% static 'external/milligram/milligram.css' %}">
+    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" /> 
+    {% endcompress %}
+
     {% block css %}{% endblock %}
 </head>
 
@@ -74,17 +163,14 @@
             </div>
         </footer>
     </div>
-    <!-- CSS at the bottom so the DOM elements can render first -->
-    <link rel="stylesheet" href="{% static 'external/milligram/milligram.css' %}">
-    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css" /> 
     {% block scripts %}{% endblock %}
     <!-- Google Analytics -->
-    <!-- <script>
+    <script>
             window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
             ga('create', 'UA-79034438-1', 'auto');
             ga('send', 'pageview');
         </script>
-        <script async src='https://www.google-analytics.com/analytics.js'></script> -->
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
 </body>
 

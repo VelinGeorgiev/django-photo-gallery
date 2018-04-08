@@ -22,7 +22,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^$', app.views.gallery, name='gallery'),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/icons/favicon.ico', permanent=True)),
-    url(r'^(?P<album_slug>[-\w]+)$', app.views.AlbumDetail.as_view(), name='album'),
+    url(r'^(?P<slug>[-\w]+)$', app.views.AlbumDetail.as_view(), name='album'),
 
     # seo
     url(r'^robots.txt$', TemplateView.as_view(template_name="robots.txt", content_type="text/plain"), name="robots_file"),

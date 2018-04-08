@@ -24,7 +24,7 @@ class AlbumViewSitemap(Sitemap):
         return obj.modified
 
     def location(self, item):
-        return reverse("album", kwargs={"album_slug": item.slug})
+        return reverse("album", kwargs={"slug": item.slug})
 
 class ImagesViewSitemap(Sitemap):
     changefreq = "weekly"
@@ -49,4 +49,4 @@ class ImagesViewSitemap(Sitemap):
         return obj['created']
 
     def location(self, item):
-        return reverse("album", kwargs={"album_slug": item['slug']})
+        return reverse("album", kwargs={"slug": item['slug']})

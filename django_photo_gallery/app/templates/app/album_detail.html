@@ -1,5 +1,17 @@
-{% extends "layout.html" %} {% load staticfiles %} {% block css %}
-{% endblock %} {% block content %} {% if album.is_visible %}
+{% extends "layout.html" %} 
+{% load staticfiles %} 
+{% load compress %}
+
+{% block css %}
+    {% compress css inline %}
+        <link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}">
+        <link rel="stylesheet" href="{% static 'external/photoswipe/default-skin/default-skin.css' %}"> 
+    {% endcompress %}
+{% endblock %} 
+
+{% block content %} 
+
+{% if album.is_visible %}
 
 <article>
     <header>
@@ -103,8 +115,9 @@
 {% else %}
 <h3>This album is temporarily unavailable.</h3>
 {% endif %} {% endblock %} {% block scripts %}
-<link rel="stylesheet" href="{% static 'external/photoswipe/photoswipe.css' %}">
-<link rel="stylesheet" href="{% static 'external/photoswipe/default-skin/default-skin.css' %}"> 
+
+
+{% compress js %}
 <script>
     // build the json album images collection 
     window.djangoAlbumImages = [
@@ -116,4 +129,6 @@
 <script src="{% static 'external/photoswipe/photoswipe.min.js' %}"></script>
 <script src="{% static 'external/photoswipe/photoswipe-ui-default.min.js' %}"></script> 
 <script src="{% static 'app.js' %}"></script>
+{% endcompress %}
+
 {% endblock %}
