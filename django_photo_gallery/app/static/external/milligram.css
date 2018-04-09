@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  color: #606c76;
+  color: #212121;
   font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.6em;
   font-weight: 300;
@@ -48,7 +48,7 @@ input[type='submit'] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 700;
   height: 3.8rem;
   letter-spacing: .1rem;

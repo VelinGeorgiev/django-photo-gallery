@@ -7,33 +7,34 @@
 <h1 class="title">
     Responsive, simplistic, optimized for performance photo gallery
 </h1>
-<div class="container">
-    <div class="row">
-        <ul class="cards">
-            {% for album in albums %}
+<div class="row">
+    <ul class="cards">
+        {% for album in albums %}
 
-            <li class="cards__item">
-                <div class="card">
-                    <img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="card__image" />
-                    <div class="card__content">
-                        <div class="card__title">{{ album.title }}</div>
-                        <p class="card__text">{{ album.description|truncatechars:120 }}</p>
-                        <a class="button" href="{% url 'album' album.slug %}">More Images</a>
-                    </div>
+        <li class="cards__item">
+            <div class="card">
+                    
+                <img src="{{ album.thumb.url }}" alt="{{ album.title }}" onclick="window.location.href = '{{album.slug}}';" class="card__image" />
+            
+                <div class="card__content">
+                    <div class="card__title">{{ album.title }}</div>
+                    <p class="card__text">{{ album.description|truncatechars:120 }}</p>
+                    <a class="button" href="{% url 'album' album.slug %}">More Images</a>
                 </div>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="pagination center">
-        <span class="step-links">
-            {% if albums.has_previous %}
-            <a href="?page={{ albums.previous_page_number }}" class="waves-effect waves-light btn btn-large">Previous</a>
-            {% endif %} {% if albums.has_next %}
-            <a href="?page={{ albums.next_page_number }}" class="waves-effect waves-light btn btn-large">Next</a>
-            {% endif %}
-        </span>
-    </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
+
+<div class="row">
+    <span class="step-links">
+        {% if albums.has_previous %}
+        <a href="?page={{ albums.previous_page_number }}" class="waves-effect waves-light btn btn-large">Previous</a>
+        {% endif %} {% if albums.has_next %}
+        <a href="?page={{ albums.next_page_number }}" class="waves-effect waves-light btn btn-large">Next</a>
+        {% endif %}
+    </span>
+</div>
+
 {% endblock %}

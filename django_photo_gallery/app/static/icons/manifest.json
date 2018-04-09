@@ -1,5 +1,6 @@
 {
- "name": "App",
+ "name": "Ireland views - Django photo gallery",
+ "short_name": "Ireland views",
  "icons": [
   {
    "src": "\/static\/icons\/android-icon-36x36.png",
