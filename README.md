@@ -6,7 +6,11 @@
 
 This sample contains a Django 2.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
 
-[Demo here](http://django-photo-gallery.velingeorgiev.com/)
+[Demo here](https://www.irelandviews.com/)
+
+Latest Chrome Lighthouse Audit (No Chrome extentions installed)
+
+![Django Photo Gallery Sample - Chrome Lighthouse Audit](./assets/Chrome-Audit-Result.PNG)
 
 ![Django Photo Gallery Sample](./assets/django_photo_gallery_explore.gif)
 
