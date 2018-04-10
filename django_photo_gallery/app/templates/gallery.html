@@ -28,13 +28,18 @@
 </div>
 
 <div class="row">
-    <span class="step-links">
+    <div class="column column-25 column-offset-25">
+        
         {% if albums.has_previous %}
-        <a href="?page={{ albums.previous_page_number }}" class="waves-effect waves-light btn btn-large">Previous</a>
-        {% endif %} {% if albums.has_next %}
-        <a href="?page={{ albums.next_page_number }}" class="waves-effect waves-light btn btn-large">Next</a>
+            <a href="?page={{ albums.previous_page_number }}" class="button">Previous page</a>
         {% endif %}
-    </span>
+    </div>
+    <div class="column column-25">
+
+         {% if albums.has_next %}
+            <a href="?page={{ albums.next_page_number }}" class="button">Next page</a>
+         {% endif %}
+    </div>
 </div>
 
 {% endblock %}

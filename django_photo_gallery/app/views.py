@@ -19,7 +19,7 @@ def gallery(request):
     except EmptyPage:
         albums = paginator.page(paginator.num_pages) # If page is out of range (e.g.  9999), deliver last page of results.
 
-    return render(request, 'gallery.html', { 'albums': list })
+    return render(request, 'gallery.html', { 'albums': albums })
 
 class AlbumDetail(DetailView):
      model = Album
