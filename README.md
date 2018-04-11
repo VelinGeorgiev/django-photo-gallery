@@ -1,10 +1,10 @@
 # Django Photo Gallery Sample #
 
-![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.1-green.svg)
+![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.2-green.svg)
 
 ## Summary
 
-This sample contains a Django 1.10.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
+This sample contains a Django 2.0.x Image Gallery Site. The album images are optimized for performance. The Django Photo Gallery Sample is responsive and mobile/device friendly.
 
 ![Django Photo Gallery Sample](./assets/django_photo_gallery_explore.gif)
 
@@ -58,7 +58,7 @@ Version|Date|Comments
     - `virtualenv env` (requires virtualenv)
     - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`
     - `pip install -r requirements.txt`
-    - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-3.0.0-cp27-none-win32.whl` (if you are not using python 2.7 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
+    - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-5.0.0-cp36-none-win32.whl` (if you are not using python 3.6 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
     - `python manage.py runserver`
     - Open http://127.0.0.1:8000/ in web browser.
     - To access the admin forms go to http://127.0.0.1:8000/admin/ and enter user: admin, password: administrator
