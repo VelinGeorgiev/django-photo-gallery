@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-  
+# -*- coding: utf-8 -*-
+import os
 import uuid
 import zipfile
 import django_photo_gallery.settings
@@ -30,6 +31,11 @@ class AlbumModelAdmin(admin.ModelAdmin):
             if form.cleaned_data['zip'] != None:
                 zip = zipfile.ZipFile(form.cleaned_data['zip'])
                 for filename in sorted(zip.namelist()):
+
+                    file_name = os.path.basename(filename)
+                    if not file_name:
+                        continue
+
                     data = zip.read(filename)
                     contentfile = ContentFile(data)
 
