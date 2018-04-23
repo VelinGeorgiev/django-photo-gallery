@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import os
+# -*- coding: utf-8 -*-  
 import uuid
 import zipfile
 import django_photo_gallery.settings
@@ -27,16 +26,10 @@ class AlbumModelAdmin(admin.ModelAdmin):
             album = form.save(commit=False)
             album.modified = datetime.now()
             album.save()
-            import pdb; pdb.set_trace()
+
             if form.cleaned_data['zip'] != None:
                 zip = zipfile.ZipFile(form.cleaned_data['zip'])
                 for filename in sorted(zip.namelist()):
-
-                    # Short following portion get rif of zip structure
-                    test_filename = os.path.basename(filename)
-                    if not test_filename:
-                        continue
-
                     data = zip.read(filename)
                     contentfile = ContentFile(data)
 
