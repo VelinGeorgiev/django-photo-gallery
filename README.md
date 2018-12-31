@@ -1,6 +1,6 @@
 # Django Photo Gallery Sample #
 
-![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.4-green.svg)
+![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.5-green.svg)
 
 ## Summary
 
@@ -23,7 +23,7 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 ## Tested with Django / Python
 ![Python](https://img.shields.io/badge/Python-3.6-green.svg)
-![Django](https://img.shields.io/badge/Django-2.0.4-green.svg)
+![Django](https://img.shields.io/badge/Django-2.1.4-green.svg)
 
 ## Additional Django apps dependencies
 - Pillow
@@ -52,6 +52,7 @@ Version|Date|Comments
 0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
 0.0.3|April 07, 2018 | django-material replaced with milligram
 0.0.4|April 08, 2018 | seo and compression optimizations
+0.0.5|December 31, 2018 | Updated to Django 2.1.4 and Django-material 1.4.3
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
@@ -65,7 +66,7 @@ Version|Date|Comments
     - `virtualenv env` (requires virtualenv)
     - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`
     - `pip install -r requirements.txt`
-    - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-5.0.0-cp27-none-win32.whl` (if you are not using python 2.7 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
+    - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-5.0.0-cp36-none-win32.whl` (if you are not using python 3.6 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
     - `python manage.py runserver`
     - Open http://127.0.0.1:8000/ in web browser.
     - To access the admin forms go to http://127.0.0.1:8000/admin/ and enter user: admin, password: administrator

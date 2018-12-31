@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.contrib.auth import views as auth_views
+from django.contrib.auth import views
 from django.views.generic.base import RedirectView
 from django.views.generic import TemplateView
 from django.views.decorators.cache import never_cache
@@ -29,9 +29,13 @@ urlpatterns = [
     url(r'^sitemap\.xml$', never_cache(sitemap), {'sitemaps': sitemaps}, name='sitemap'),
     url(r'^images-sitemap\.xml$', never_cache(sitemap), { 'sitemaps': {'images': ImagesViewSitemap }, 'template_name': 'images_sitemap.html' }, name='images_sitemap'),
 
+    url(r'^(?P<slug>[-\w]+)$', app.views.AlbumDetail.as_view(), name='album'),
+    
     # admin
-    url(r'^accounts/login/$', auth_views.login, name='login'),
-    url(r'^logout$', auth_views.logout, { 'next_page': '/', }, name='logout'),
+    url(r'^accounts/login/$', views.LoginView, name='login'),
+    url(r'^logout$', views.LogoutView, { 'next_page': '/', }, name='logout'),
+
+    # Uncomment the next line to enable the admin:
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
