@@ -1,6 +1,6 @@
 # Django Photo Gallery Sample #
 
-![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.2-green.svg)
+![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.3-green.svg)
 
 ## Summary
 
@@ -17,7 +17,7 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 ## Tested with Django / Python
 ![Python](https://img.shields.io/badge/Python-2.3.6-green.svg)
-![Django](https://img.shields.io/badge/Django-2.0.4-green.svg)
+![Django](https://img.shields.io/badge/Django-2.1.4-green.svg)
 
 ## Additional Django apps dependencies
 - Pillow
