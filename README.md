@@ -45,6 +45,7 @@ Version|Date|Comments
 -------|----|--------
 0.0.1|April 30, 2017 | Initial commit
 0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
+0.0.3|December 31, 2018 | Updated to Django 2.1.4 and Django-material 1.4.3
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
