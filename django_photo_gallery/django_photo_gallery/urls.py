@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.contrib.auth import views as auth_views
+from django.contrib.auth import views
 from django.views.generic.base import RedirectView
 
 from django.conf import settings
@@ -18,8 +18,9 @@ urlpatterns = [
     url(r'^(?P<slug>[-\w]+)$', app.views.AlbumDetail.as_view(), name='album'), #app.views.AlbumView.as_view()
      
     # Auth related urls
-    url(r'^accounts/login/$', auth_views.login, name='login'),
-    url(r'^logout$', auth_views.logout, { 'next_page': '/', }, name='logout'),
+    
+    url(r'^accounts/login/$', views.LoginView, name='login'),
+    url(r'^logout$', views.LogoutView, { 'next_page': '/', }, name='logout'),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', admin.site.urls),

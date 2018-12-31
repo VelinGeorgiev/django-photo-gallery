@@ -1,4 +1,4 @@
-django == 2.0.4
-django-material == 1.2.2
+django == 2.1.4
+django-material == 1.4.3
 Pillow == 5.00
 django-imagekit == 4.0.2
