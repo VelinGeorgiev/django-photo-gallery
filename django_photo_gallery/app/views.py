@@ -31,6 +31,6 @@ class AlbumDetail(DetailView):
         context['images'] = AlbumImage.objects.filter(album=self.object.id)
         return context
 
-def handler404(request):
+def handler404(request, exception):
     assert isinstance(request, HttpRequest)
     return render(request, 'handler404.html', None, None, 404)

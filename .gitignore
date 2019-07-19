@@ -247,3 +247,5 @@ django_photo_gallery/env/
 #django_photo_gallery/media/
 apache_config.txt
 *.pyc
+
+env

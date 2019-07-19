@@ -1,6 +1,6 @@
 # Django Photo Gallery Sample #
 
-![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.3-green.svg)
+![Django Photo Gallery Sample Version](https://img.shields.io/badge/Version-0.0.4-green.svg)
 
 ## Summary
 
@@ -16,12 +16,11 @@ Albums can be created from the Django admin panel where one zip file with all th
 
 
 ## Tested with Django / Python
-![Python](https://img.shields.io/badge/Python-2.3.6-green.svg)
-![Django](https://img.shields.io/badge/Django-2.1.4-green.svg)
+![Python](https://img.shields.io/badge/Python-3.6-green.svg)
+![Django](https://img.shields.io/badge/Django-2.2.3-green.svg)
 
 ## Additional Django apps dependencies
 - Pillow
-- django-material
 - django-imagekit
 
 ## Additional JavaScript apps dependencies
@@ -46,6 +45,7 @@ Version|Date|Comments
 0.0.1|April 30, 2017 | Initial commit
 0.0.2|April 06, 2018 | Updated to python 3.6 and Django 2.0.4
 0.0.3|December 31, 2018 | Updated to Django 2.1.4 and Django-material 1.4.3
+0.0.4|July 19, 2019 | Updated to Django 2.2.3
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
@@ -56,11 +56,13 @@ Version|Date|Comments
 
 - Clone this repository.
 - Open the command line, navigate to the django app folder and execute:
-    - `virtualenv env` (requires virtualenv)
-    - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`
-    - `pip install -r requirements.txt`
+    - `virtualenv env` (requires virtualenv), Mac `virtualenv yourenv -p python3.6`
+    - Linux: `source env/bin/activate`, Windows: `call env/Scripts/activate.bat`, Mac `source env/bin/activate`
+    - navigate to the `django_photo_gallery` folder using `cd django_photo_gallery`
+    - execute `pip install -r requirements.txt` or `pip3 install -r requirements.txt` depending on your python installation. 
     - If the Pillow fail to install on Windows, then install it manually `pip install ../whl/Pillow-5.0.0-cp36-none-win32.whl` (if you are not using python 3.6 32 bit then  [download the Pillow wheel](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow) for your python version).
-    - `python manage.py runserver`
+    - Run `python manage.py migrate` or `python3 manage.py migrate`
+    - Run `python manage.py runserver` or `python3 manage.py runserver` depending on your python installation
     - Open http://127.0.0.1:8000/ in web browser.
     - To access the admin forms go to http://127.0.0.1:8000/admin/ and enter user: admin, password: administrator
 
