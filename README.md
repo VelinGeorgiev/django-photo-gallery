@@ -52,7 +52,7 @@ and
 | 0.0.3   | December 31, 2018  | Updated to Django 2.1.4 and Django-material 1.4.3 |
 | 0.0.4   | July 19, 2019      | Updated to Django 2.2.3                           |
 | 0.0.5   | September 19, 2021 | Updated to Django 3.2.7 and Django-material 1.9.0 |
-|         |                    | Possibility of use docker-compose                 |
+|         |                    | Usage in a docker container with python 3.9       |
 
 ## Disclaimer
 **THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
