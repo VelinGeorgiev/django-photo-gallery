@@ -51,7 +51,7 @@ and
 | 0.0.2   | April 06, 2018     | Updated to python 3.6 and Django 2.0.4            |
 | 0.0.3   | December 31, 2018  | Updated to Django 2.1.4 and Django-material 1.4.3 |
 | 0.0.4   | July 19, 2019      | Updated to Django 2.2.3                           |
-| 0.0.5   | September 19, 2021 | Updated to Django 3.2.7                           |
+| 0.0.5   | September 19, 2021 | Updated to Django 3.2.7 and Django-material 1.9.0 |
 |         |                    | Possibility of use docker-compose                 |
 
 ## Disclaimer
