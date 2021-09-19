@@ -25,8 +25,6 @@ and
 ## Additional Django apps dependencies
 - Pillow 8.3.2
 - django-imagekit 4.0.2
-- Docker 20.10.8
-- docker-compose 1.27.4
 
 ## Additional JavaScript apps dependencies
 - jquery
